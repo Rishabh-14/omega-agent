@@ -1,3 +1,4 @@
+''''
 from langchain_openai import ChatOpenAI
 
 llm = ChatOpenAI()
@@ -19,7 +20,7 @@ output_parser = StrOutputParser()
 chain = prompt | llm | output_parser
 response = chain.invoke({"input": "how can langsmith help with testing?"})
 print(response)
-''''
+'''
 from langchain_community.document_loaders import WebBaseLoader
 loader = WebBaseLoader("https://docs.smith.langchain.com")
 
@@ -28,4 +29,3 @@ docs = loader.load()
 from langchain_openai import OpenAIEmbeddings
 
 embeddings = OpenAIEmbeddings()
-'''
